@@ -1,0 +1,5 @@
+
+
+> @onecoach/ui-core@0.0.0 type-check /Users/giulioleone/Sviluppo/CoachOne/submodules/onecoach-ui/packages/oneui-core
+> tsc --noEmit
+

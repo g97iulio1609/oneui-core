@@ -6,3 +6,10 @@
  */
 
 export const VERSION = '0.0.0';
+
+export * from './components/button';
+export * from './components/input';
+export * from './components/card';
+export * from './components/button.shared';
+
+
