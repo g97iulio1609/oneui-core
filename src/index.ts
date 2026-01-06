@@ -1,18 +1,26 @@
 /**
  * @onecoach/ui-core
- * 
+ *
  * Core UI components for OneCoach applications.
- * This package contains foundational UI elements like Button, Input, Card, etc.
+ * Provides foundational elements: Button, Input, Card, DnD, and utilities.
+ *
+ * @packageDocumentation
  */
 
-export const VERSION = '0.0.0';
-
+// =============================================================================
+// Core Form Components
+// =============================================================================
 export * from './components/button';
-export * from './components/input';
-export * from './components/card';
 export * from './components/button.shared';
+export * from './components/input';
+
+// =============================================================================
+// Layout Components
+// =============================================================================
+export * from './components/card';
+
+// =============================================================================
+// Interactive Components
+// =============================================================================
 export * from './components/dnd';
 export * from './components/progress-ring';
-
-
-
