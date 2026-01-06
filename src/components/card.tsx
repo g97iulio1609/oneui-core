@@ -2,11 +2,11 @@
  * Card Component
  *
  * Mobile-first, responsive card with design tokens
- * Deep dark mode optimized
+ * Premium dark mode optimized
  */
 
 import React from 'react';
-import { darkModeClasses, cn } from '@onecoach/lib-design-system';
+import { cn } from '@onecoach/lib-design-system';
 
 export interface CardProps extends React.HTMLAttributes<HTMLDivElement> {
   variant?:
@@ -44,53 +44,68 @@ export const Card = ({
 }: CardProps) => {
   const glassIntensityClasses = {
     light:
-      'bg-white/40 dark:bg-neutral-900/40 backdrop-blur-md ring-1 ring-white/30 dark:ring-white/10',
+      'bg-white/60 dark:bg-neutral-900/95 backdrop-blur-md',
     medium:
-      'bg-white/50 dark:bg-neutral-900/50 backdrop-blur-xl ring-1 ring-white/40 dark:ring-white/15',
+      'bg-white/70 dark:bg-neutral-900/95 backdrop-blur-xl',
     heavy:
-      'bg-white/70 dark:bg-neutral-900/70 backdrop-blur-2xl ring-1 ring-white/50 dark:ring-white/20',
+      'bg-white/80 dark:bg-neutral-900 backdrop-blur-2xl',
   };
 
   const variantStyles = {
     default: cn(
-      darkModeClasses.card.base,
-      'rounded-2xl shadow-sm border border-neutral-200 dark:border-neutral-800'
+      'bg-white dark:bg-neutral-900',
+      'rounded-2xl shadow-sm dark:shadow-lg dark:shadow-black/20',
+      'border border-neutral-200/60 dark:border-neutral-800/60'
     ),
     elevated: cn(
-      darkModeClasses.card.elevated,
-      'rounded-2xl shadow-xl shadow-neutral-900/5 dark:shadow-neutral-900/20 border border-neutral-100 dark:border-neutral-700'
+      'bg-white dark:bg-neutral-900',
+      'rounded-2xl shadow-xl dark:shadow-2xl dark:shadow-black/30',
+      'border border-neutral-100 dark:border-neutral-800/50'
     ),
     bordered: cn(
-      darkModeClasses.card.base,
-      'rounded-xl shadow-sm border border-neutral-200 dark:border-neutral-700'
+      'bg-white dark:bg-neutral-900',
+      'rounded-xl shadow-sm dark:shadow-lg dark:shadow-black/20',
+      'border border-neutral-200 dark:border-neutral-800/60'
     ),
     interactive: cn(
-      darkModeClasses.card.interactive,
-      'rounded-2xl border border-transparent hover:border-primary-500/20 dark:hover:border-primary-400/20 transition-all duration-300 cursor-pointer'
+      'bg-white dark:bg-neutral-900',
+      'rounded-2xl border border-neutral-200/60 dark:border-neutral-800/60',
+      'hover:border-blue-400/50 dark:hover:border-blue-500/40',
+      'hover:shadow-lg dark:hover:shadow-xl dark:hover:shadow-black/30',
+      'transition-all duration-300 cursor-pointer'
     ),
     glass: cn(
       glassIntensityClasses[glassIntensity],
-      'rounded-2xl shadow-lg border border-white/20 dark:border-white/5 transition-all duration-300 text-neutral-900 dark:text-white'
+      'rounded-2xl shadow-lg dark:shadow-xl dark:shadow-black/25',
+      'border border-neutral-200/40 dark:border-neutral-700/40',
+      'transition-all duration-300 text-neutral-900 dark:text-white'
     ),
     'glass-strong': cn(
       glassIntensityClasses.heavy,
-      'rounded-3xl shadow-2xl border border-white/40 dark:border-white/10 transition-all duration-300 text-neutral-900 dark:text-white'
+      'rounded-3xl shadow-2xl dark:shadow-2xl dark:shadow-black/30',
+      'border border-neutral-200/50 dark:border-neutral-700/50',
+      'transition-all duration-300 text-neutral-900 dark:text-white'
     ),
     'glass-premium': cn(
       glassIntensityClasses.heavy,
-      'rounded-[2.5rem] shadow-[0_32px_64px_-16px_rgba(0,0,0,0.2)] border border-white/50 dark:border-white/10 transition-all duration-700 text-neutral-900 dark:text-white',
-      'relative overflow-hidden group/premium',
-      'ring-1 ring-inset ring-white/20 dark:ring-white/5',
-      'bg-gradient-to-br from-white/10 to-transparent dark:from-white/5'
+      'rounded-[2rem] shadow-[0_32px_64px_-16px_rgba(0,0,0,0.15)] dark:shadow-[0_32px_64px_-16px_rgba(0,0,0,0.5)]',
+      'border border-neutral-200/40 dark:border-neutral-700/30',
+      'transition-all duration-700 text-neutral-900 dark:text-white',
+      'relative overflow-hidden group/premium'
     ),
     'glass-vibrant': cn(
       glassIntensityClasses.heavy,
-      'rounded-[2.5rem] shadow-[0_20px_40px_rgba(59,130,246,0.25)] border border-blue-500/30 dark:border-blue-400/20 transition-all duration-500 text-neutral-900 dark:text-white',
-      'bg-gradient-to-br from-blue-500/10 via-transparent to-purple-500/10'
+      'rounded-[2rem] shadow-[0_20px_40px_rgba(59,130,246,0.15)] dark:shadow-[0_20px_40px_rgba(59,130,246,0.1)]',
+      'border border-blue-400/30 dark:border-blue-500/20',
+      'transition-all duration-500 text-neutral-900 dark:text-white',
+      'bg-gradient-to-br from-blue-500/5 via-transparent to-purple-500/5'
     ),
     hover: cn(
-      darkModeClasses.card.interactive,
-      'rounded-2xl hover:-translate-y-1 hover:shadow-xl hover:shadow-blue-500/10 hover:border-blue-500/20 transition-all duration-300'
+      'bg-white dark:bg-neutral-900',
+      'rounded-2xl border border-neutral-200/60 dark:border-neutral-800/60',
+      'hover:-translate-y-1 hover:shadow-xl dark:hover:shadow-2xl dark:hover:shadow-black/30',
+      'hover:border-blue-400/30 dark:hover:border-blue-500/30',
+      'transition-all duration-300'
     ),
   };
 
