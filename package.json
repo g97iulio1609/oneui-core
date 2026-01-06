@@ -1,0 +1,35 @@
+{
+  "name": "@onecoach/ui-core",
+  "version": "0.0.0",
+  "type": "module",
+  "description": "Core UI components for OneCoach",
+  "main": "src/index.ts",
+  "types": "src/index.ts",
+  "exports": {
+    ".": {
+      "types": "./src/index.ts",
+      "default": "./src/index.ts"
+    }
+  },
+  "scripts": {
+    "type-check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@onecoach/lib-design-system": "workspace:*",
+    "@onecoach/types": "workspace:*",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "lucide-react": "^0.562.0",
+    "tailwind-merge": "^3.4.0"
+  },
+  "peerDependencies": {
+    "framer-motion": ">=11.0.0",
+    "react": ">=18.0.0",
+    "react-dom": ">=18.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19.0.10",
+    "typescript": "^5.9.3"
+  },
+  "sideEffects": false
+}
