@@ -16,15 +16,22 @@
   },
   "dependencies": {
     "@onecoach/lib-design-system": "workspace:*",
-    "@onecoach/types": "workspace:*",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "lucide-react": "^0.562.0",
     "tailwind-merge": "^3.4.0",
     "@dnd-kit/core": "^6.3.1",
     "@dnd-kit/sortable": "^10.0.0",
-    "@dnd-kit/utilities": "^3.2.2"
-
+    "@dnd-kit/utilities": "^3.2.2",
+    "@onecoach/types-core": "workspace:*",
+    "@onecoach/types-workout": "workspace:*",
+    "@onecoach/types-nutrition": "workspace:*",
+    "@onecoach/types-chat": "workspace:*",
+    "@onecoach/types-analytics": "workspace:*",
+    "@onecoach/types-ai": "workspace:*",
+    "@onecoach/types-ui": "workspace:*",
+    "@onecoach/types-domain": "workspace:*",
+    "@onecoach/types-database": "workspace:*"
   },
   "peerDependencies": {
     "framer-motion": ">=11.0.0",
