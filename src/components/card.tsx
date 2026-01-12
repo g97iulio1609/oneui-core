@@ -53,22 +53,22 @@ export const Card = ({
 
   const variantStyles = {
     default: cn(
-      'bg-white dark:bg-neutral-900',
+      'bg-background-base',
       'rounded-2xl shadow-sm dark:shadow-lg dark:shadow-black/20',
       'border border-neutral-200/60 dark:border-neutral-800/60'
     ),
     elevated: cn(
-      'bg-white dark:bg-neutral-900',
+      'bg-background-elevated',
       'rounded-2xl shadow-xl dark:shadow-2xl dark:shadow-black/30',
       'border border-neutral-100 dark:border-neutral-800/50'
     ),
     bordered: cn(
-      'bg-white dark:bg-neutral-900',
+      'bg-background-base',
       'rounded-xl shadow-sm dark:shadow-lg dark:shadow-black/20',
       'border border-neutral-200 dark:border-neutral-800/60'
     ),
     interactive: cn(
-      'bg-white dark:bg-neutral-900',
+      'bg-background-base',
       'rounded-2xl border border-neutral-200/60 dark:border-neutral-800/60',
       'hover:border-blue-400/50 dark:hover:border-blue-500/40',
       'hover:shadow-lg dark:hover:shadow-xl dark:hover:shadow-black/30',
@@ -101,7 +101,7 @@ export const Card = ({
       'bg-gradient-to-br from-blue-500/5 via-transparent to-purple-500/5'
     ),
     hover: cn(
-      'bg-white dark:bg-neutral-900',
+      'bg-background-base',
       'rounded-2xl border border-neutral-200/60 dark:border-neutral-800/60',
       'hover:-translate-y-1 hover:shadow-xl dark:hover:shadow-2xl dark:hover:shadow-black/30',
       'hover:border-blue-400/30 dark:hover:border-blue-500/30',

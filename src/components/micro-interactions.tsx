@@ -19,9 +19,19 @@ export const ScaleTouch = ({
   return (
     <div
       className={cn(
-        'transition-transform duration-200 ease-out active:scale-[0.96] cursor-pointer',
+        'transition-transform duration-200 ease-out cursor-pointer',
         className
       )}
+      style={{ '--scale-touch': scale } as React.CSSProperties}
+      onMouseDown={(e) => {
+        (e.currentTarget as HTMLElement).style.transform = `scale(${scale})`;
+      }}
+      onMouseUp={(e) => {
+        (e.currentTarget as HTMLElement).style.transform = 'scale(1)';
+      }}
+      onMouseLeave={(e) => {
+        (e.currentTarget as HTMLElement).style.transform = 'scale(1)';
+      }}
       {...props}
     >
       {children}

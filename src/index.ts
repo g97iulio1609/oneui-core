@@ -11,19 +11,14 @@
 // Core Form Components
 // =============================================================================
 export * from './components/button';
+// Exported via button
 export * from './components/button.shared';
 export * from './components/input';
-export * from './components/notes-input';
-export * from './components/empty-state';
-export * from './components/progress-ring';
-
-
-
-
 
 // =============================================================================
 // Layout Components
 // =============================================================================
+export * from './components/badge';
 export * from './components/card';
 
 // =============================================================================
@@ -35,6 +30,34 @@ export * from './components/progress-ring';
 // =============================================================================
 // Premium Layout Components
 // =============================================================================
-export { GlassContainer } from './components/glass-container';
-export { ScaleTouch, PulseIndicator, AnimatedNumber } from './components/micro-interactions';
+export * from './components/glass-container';
+export * from './components/micro-interactions';
+export * from './typography';
+
+
+// =============================================================================
+// Feedback & Input Components
+// =============================================================================
+export * from './components/empty-state';
+export * from './components/notes-input';
+
+// =============================================================================
+// Selection & Toolbar Components
+// =============================================================================
+// =============================================================================
+// Wizard Components
+// =============================================================================
+export * from './components/wizard/selection-card';
+export * from './components/wizard/wizard-radio-group';
+export * from './components/wizard/wizard-slider';
+
+export * from './selection-toolbar';
+
+export * from './components/import-modal';
+
+export * from './components/dialog';
+export * from './dropdown-menu';
+
+export * from './theme-toggle';
+export * from './realtime-provider';
 

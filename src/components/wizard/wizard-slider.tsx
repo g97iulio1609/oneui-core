@@ -1,0 +1,65 @@
+import { cn } from '@onecoach/lib-design-system';
+
+interface WizardSliderProps {
+  label: string;
+  value: number;
+  min: number;
+  max: number;
+  onChange: (value: number) => void;
+  valueLabel?: string;
+  minLabel?: string;
+  maxLabel?: string;
+  description?: string;
+  step?: number;
+  className?: string; // Added className to props interface
+}
+
+export function WizardSlider({
+  label,
+  value,
+  min,
+  max,
+  onChange,
+  valueLabel,
+  minLabel,
+  maxLabel,
+  description,
+  step = 1,
+  className,
+}: WizardSliderProps) {
+  return (
+    <div className={cn("space-y-4 rounded-xl border border-neutral-200 bg-white p-5 dark:border-neutral-800 dark:bg-neutral-900/50", className)}>
+      <div className="flex flex-row items-center justify-between">
+        <label className="text-sm font-medium text-neutral-900 dark:text-white">{label}</label>
+        <div className="rounded-lg bg-blue-100 px-3 py-1 dark:bg-blue-900/30">
+          <span className="text-xs font-bold text-blue-700 dark:text-blue-300">
+            {value} {valueLabel}
+          </span>
+        </div>
+      </div>
+      
+      <div className="relative h-6 flex items-center">
+        <input
+          type="range"
+          min={min}
+          max={max}
+          step={step}
+          value={value}
+          onChange={(e) => onChange(Number(e.target.value))}
+          className="w-full h-2 bg-neutral-200 rounded-lg appearance-none cursor-pointer dark:bg-neutral-700 accent-blue-600 dark:accent-blue-500"
+        />
+      </div>
+      
+      <div className="flex justify-between text-xs font-medium text-neutral-500 dark:text-neutral-400">
+        <span>{minLabel || min}</span>
+        <span>{maxLabel || max}</span>
+      </div>
+
+      {description && (
+        <p className="text-xs text-neutral-500 dark:text-neutral-400 leading-relaxed border-t border-neutral-100 dark:border-neutral-800 pt-3 mt-1">
+          {description}
+        </p>
+      )}
+    </div>
+  );
+}
