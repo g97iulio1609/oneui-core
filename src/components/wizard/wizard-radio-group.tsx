@@ -25,8 +25,8 @@ export function WizardRadioGroup<T extends string | number>({
             className={cn(
               'flex-1 items-center justify-center rounded-xl border-2 px-4 py-3 transition-all outline-none focus:ring-2 focus:ring-blue-500/20',
               isSelected
-                ? 'border-blue-500 bg-blue-50 dark:border-blue-500 dark:bg-blue-900/20 text-blue-700 dark:text-blue-300 font-semibold'
-                : 'border-neutral-200 bg-white hover:border-neutral-300 dark:border-neutral-800 dark:bg-neutral-900 dark:hover:border-neutral-700 text-neutral-600 dark:text-neutral-400 font-medium'
+                ? 'border-blue-500 bg-blue-50 dark:border-blue-500/50 dark:bg-blue-600/20 text-blue-700 dark:text-blue-100 font-semibold'
+                : 'border-neutral-200 bg-white hover:border-neutral-300 dark:border-white/10 dark:bg-white/5 dark:hover:bg-white/10 text-neutral-600 dark:text-neutral-400 font-medium'
             )}
           >
             {option.label}
